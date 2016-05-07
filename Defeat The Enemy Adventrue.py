@@ -1,7 +1,6 @@
 import random
 
-class you:
-
+class Player:
     def __init__(self):
         self.your_hp = 1000
         self.your_defence = 0
@@ -12,7 +11,7 @@ class you:
     def attack_detrminer(self):
         self.your_attack = input("Chose your attack, a.sword swing, b.roman candel, c.sheild, d.med kit")
 
-    def sowrd_swing(self):
+    def sword_swing(self):
         self.your_target - 50
 
     def sheild(self):
@@ -22,37 +21,27 @@ class you:
         self.your_hp + 300
 
     def roman_candel(self):
-        your_target - (random.randint(100-200) + random.randint(100-200))
+        self.your_target - (random.randint(100-200) + random.randint(100-200))
 
 
-# Enemy Classes
-class crytsal_elemental:
-  #Atributes
-    hp = 100
-    defence = 2
-  def bump(self):
+class Enemy:
+    def __init__(self, name, max_hp, attacks, abilities):
+        self.name = name
+        self.max_hp = max_hp
+        self.hp = max_hp
+        self.attacks = attacks
+        self.abilities = abilities
 
 
-  # Ablilitys
+class Attack:
+    def __init__(self, name, damage, variance, post_message):
+        self.name = name
+        self.damage = damage
+        self.variance = variance
+
+    def do(self):
+        print("{} used {} for {}".format())
+        return random.randint(self.damage-self.variance, self.damage+self.variance)
 
 
-
-class quartz_beast:
-  #Atributes
-    hp = 350
-    defence = 10
-    slam = -30
-    rock_skin = defence + 15
-  # Abilitys
-
-class Earth_bound_rock:
-  #Atributes
-    hp = 200
-    defence =3
-    def pelt(self):
-      your_hp - 5 * (random.randint(1,5))
-    def roll(self):
-      your_hp - 10
-
-
-
+user = Player()
