@@ -1,5 +1,6 @@
 import random
-class you():
+
+class you:
 
     def __init__(self):
         self.your_hp = 1000
@@ -25,9 +26,7 @@ class you():
 
 
 # Enemy Classes
-
-
-class crytsal_elemental():
+class crytsal_elemental:
   #Atributes
     hp = 100
     defence = 2
@@ -38,7 +37,7 @@ class crytsal_elemental():
 
 
 
-class quartz_beast():
+class quartz_beast:
   #Atributes
     hp = 350
     defence = 10
@@ -46,12 +45,12 @@ class quartz_beast():
     rock_skin = defence + 15
   # Abilitys
 
-class Earth_bound_rock():
+class Earth_bound_rock:
   #Atributes
     hp = 200
     defence =3
     def pelt(self):
-      your_hp - 5 * (random.randint(1-5))
+      your_hp - 5 * (random.randint(1,5))
     def roll(self):
       your_hp - 10
 
